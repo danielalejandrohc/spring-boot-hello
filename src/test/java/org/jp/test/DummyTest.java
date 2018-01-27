@@ -32,7 +32,7 @@ public class DummyTest {
         URL resource = this.getClass().getClassLoader().getResource("application.yml");
         JsonNode ymlFile = mapper.readTree(resource);
         String port = ymlFile.get("server").get("port").asText();
-        String url = "http://localhost:" + port + "/v1/foo/hello";
+        String url = "http://localhost:" + port + "rest/v1/foo/hello";
         String response = restTemplate.getForObject(url, String.class);
         log.info("Response: " + response);
     }
