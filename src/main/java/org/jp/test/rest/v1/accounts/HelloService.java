@@ -31,7 +31,7 @@ public class HelloService {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public Response sayHello() {
-        Response response = Response.status(JerseyConfiguration.SUCCESS_REPONSE).entity("hello !" + new Date()).build();
+        Response response = Response.status(JerseyConfiguration.SUCCESS_REPONSE).entity("Hi !" + new Date()).build();
         return response;
     }
 }
